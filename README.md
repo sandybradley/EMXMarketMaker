@@ -6,15 +6,15 @@ EMX account - https://trade.emx.com/sign-up/BF291BAEA000
 
 Python - https://www.python.org/
 
-Install dependencies
+# Install dependencies
 pip install -r < requirements.txt
 
-Starting the script
+# Starting the script
 Edit your own api key and secret settings. Then start script with:
 
 python emx/pyEMXMarketMaker.py
 
-Karma jar
+# Karma jar
 BTC - 112eMCQJUkUz7kvxDSFCGf1nnFJZ61CE4W
 
 LTC - LR3BfiS77dZcp3KrEkfbXJS7U2vBoMFS7A
@@ -29,7 +29,7 @@ XRP - rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh Tag: 103535357
 
 EOS - binancecleos Memo: 103117718
 
-Recommended links
+# Recommended links
 Getting started - Coinbase - https://www.coinbase.com/join/bradle_6r
 
 Portfolio balance - Binance - www.binance.com/en/register?ref=LTUMGDDC
