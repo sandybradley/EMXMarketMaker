@@ -8,8 +8,7 @@ import json
  # params
 avPrice = 9700
 bands = 10
-spread = 1
-spread2 = 10
+spread = 10
 size = '0.0002'
 stopOffset = 2500
 api = RestApi('api-key', 'api-secret')
@@ -74,8 +73,6 @@ def ws_api_examples():
                             # set sell order
                             fprice = float( price )
                             sellPrice = fprice + spread
-                            if float(size) > 0.001:
-                                sellPrice = sellPrice + spread2
                             msg =  {
                                 "channel": "trading",
                                 "type": "request",
@@ -94,8 +91,6 @@ def ws_api_examples():
                             # set buy order
                             fprice = float( price )
                             buyPrice = fprice -  spread
-                            if float(size) > 0.001:
-                                buyPrice = buyPrice - spread2
                             msg =  {
                                 "channel": "trading",
                                 "type": "request",
