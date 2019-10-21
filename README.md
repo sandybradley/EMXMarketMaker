@@ -1,5 +1,5 @@
 # pyEMXMarketMaker
-Simplified EMX Market Maker
+Simplified EMX Bitcoin Market Maker. Edit params in emx/pyEMXMarketMaker.py. Sets and responds to custom buy orders, according to params. 
 
 # Pre-requisites
 EMX account - https://trade.emx.com/sign-up/BF291BAEA000
