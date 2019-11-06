@@ -44,6 +44,7 @@ def rest_api_examples():
 
 
 def ws_api_examples():
+    api = WebSocketApi('api-key', 'api-secret')
     channels = ["orders", "trading"]
     api.subscribe(["BTC-PERP"], channels)
 
