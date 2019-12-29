@@ -1,50 +1,20 @@
 from emx.rest_api import RestApi
 from emx.ws_api import WebSocketApi
 from emx.utils import EmxApiException
+import asyncio
 
 import sys
 import json
 
  # params
-avPrice = 9700
-bands = 10
 spread = 10
-size = '0.0002'
-stopOffset = 2500
-api = RestApi('api-key', 'api-secret')
-
-stopPrice =  avPrice - ( bands * spread ) - stopOffset 
+apikey = 'api-key'
+apisecret = 'api-secret'
 
 contract_code = 'BTC-PERP'
 
-def rest_api_examples():
-    try:
-        res = api.get_account()
-       
-        order_type = 'limit'
-        order_side = 'buy'
-        # set orders
-        count = 0
-        while count < bands:
-            count = count + 1
-            price = avPrice - count * spread 
-            # print(price)
-            api.create_new_order(contract_code, order_type, order_side, size, "", str(price))
-        # set stop
-        sizeStop = float(size) * bands
-        api.create_new_order( contract_code, "stop_limit", "sell", str( sizeStop ), "", str( stopPrice ))
-
-
-    except EmxApiException as err:
-        print(err)
-    except Exception as err:
-        print("Exception raised: {}".format(err))
-    else:
-        print(res)
-
-
 def ws_api_examples():
-    api = WebSocketApi('api-key', 'api-secret')
+    api = WebSocketApi(apikey, apisecret)
     channels = ["orders", "trading"]
     api.subscribe(["BTC-PERP"], channels)
 
@@ -59,18 +29,7 @@ def ws_api_examples():
                         side = dat["side"]
                         price = dat["price"]
                         size = dat["size"]
-                        if dat["order_type"] == "stop_market":
-                            msg = {
-                                "channel": "trading",
-                                "type": "request",
-                                "action": "cancel-all-orders",
-                                "data": {
-                                    "contract_code": "BTC-PERP"
-                                }
-                            }
-                            api.ws.send(json.dumps(msg))
-                            sys.exit()
-                        elif side == "buy":
+                        if side == "buy":
                             # set sell order
                             fprice = float( price )
                             sellPrice = fprice + spread
@@ -116,5 +75,4 @@ def ws_api_examples():
 
 
 if __name__ == "__main__":
-    rest_api_examples()
     ws_api_examples()
