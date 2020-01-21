@@ -1,8 +1,8 @@
-# pyEMXMarketMaker
+# EMXMarketMaker
 Simplified EMX Bitcoin Market Maker. Edit params in emx/pyEMXMarketMaker.py. Sets and responds to custom buy orders, according to params. 
 
 # Pre-requisites
-EMX account - https://trade.emx.com/sign-up/BF291BAEA000
+[Sign up for an EMX account](https://trade.emx.com/sign-up/BF291BAEA000)
 
 Python - https://www.python.org/
 
@@ -14,7 +14,7 @@ Edit your own api key and secret settings. Then start script with:
 
 python emx/pyEMXMarketMaker.py
 
-# Karma jar
+# Karma Jar
 BTC - 112eMCQJUkUz7kvxDSFCGf1nnFJZ61CE4W
 
 LTC - LR3BfiS77dZcp3KrEkfbXJS7U2vBoMFS7A
@@ -30,12 +30,10 @@ XRP - rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh Tag: 103535357
 EOS - binancecleos Memo: 103117718
 
 # Recommended links
-Getting started - Coinbase - https://www.coinbase.com/join/bradle_6r
+Getting started - [Coinbase](https://www.coinbase.com/join/bradle_6r)
 
-Portfolio balance - Binance - www.binance.com/en/register?ref=LTUMGDDC
+Portfolio balance - [Binance](https://www.binance.com/en/register?ref=LTUMGDDC)
 
-Futures trading - Deribit - https://www.deribit.com/reg-8106.6912
+Futures trading - [Deribit](https://www.deribit.com/reg-8106.6912)
 
-Cold wallet - https://atomicWallet.io?kid=12GR52 (promo 12GR52) - https://hodler.tech/
-
-Learn to earn (coinbase users) - Stellar - https://coinbase.com/earn/xlm/invite/vps5dfzt - EOS - https://coinbase.com/earn/eos/invite/xdbgswqk
+Cold wallet - [Atomic](https://atomicWallet.io?kid=12GR52)
